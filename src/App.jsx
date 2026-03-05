@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   const [products, setProducts] = useState([]);
 
-  // 👇 backend ke hisaab se decs use kar rahe hain
+  
   const [newProductForm, setNewProductForm] = useState({
     id: "",
     name: "",
@@ -42,7 +42,7 @@ function App() {
 
       alert("Product Saved Successfully ✅");
 
-      // form reset
+    
       setNewProductForm({
         id: "",
         name: "",
@@ -51,7 +51,7 @@ function App() {
         imageURL: "",
       });
 
-      // list refresh
+      
       fetchProducts();
 
     } catch (err) {
@@ -62,12 +62,12 @@ function App() {
  return (
   <div className="min-h-screen bg-slate-100 py-10 px-4">
 
-    {/* Heading */}
+    
     <h1 className="text-3xl font-bold text-center text-slate-800 mb-10">
       Product Management
     </h1>
 
-    {/* Form Section */}
+    
     <div className="max-w-lg mx-auto bg-white rounded-xl shadow-md p-8 mb-12">
       <h2 className="text-xl font-semibold text-slate-700 mb-6 text-center">
         Add New Product
@@ -130,7 +130,7 @@ function App() {
       </form>
     </div>
 
-    {/* Products Grid */}
+    
     <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
       {products.map((pr) => (
